@@ -59,7 +59,18 @@ ul {
   font-family: 'Be Vietnam Pro', sans-serif;
   border-radius: 999px;
   box-shadow: 0 0 7px 3px rgba(0, 0, 0, .2);
+  cursor: pointer;
+  transition: transform .3s;
 }
+
+.get-started:active {
+  opacity: .8;
+}
+
+.get-started:hover {
+  transform: scale(1.1);
+}
+
 .introduction-section {
   display: flex;
 }
@@ -330,7 +341,11 @@ ul {
     display: block;
     text-align: center;
   }
-  
+
+  .bullet, .bulet::before, .bullet::after {
+    cursor: pointer;
+  }
+
   .bullet {
     box-sizing: border-box;
     display: inline-block;
