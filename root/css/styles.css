@@ -1,0 +1,200 @@
+:root {
+  --rojo-brillante: rgb(242, 95, 58);
+  --azul-oscuro: rgb(35, 44, 81);
+  --azul-grisaceo-oscuro: rgb(143, 148, 167);
+  --azul-muy-oscuro: rgb(29, 30, 37);
+  --rojo-muy-palido: rgb(255, 239, 234);
+  --gris-claro: rgb(249, 249, 249);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+body {
+  background-color: #fff;
+}
+
+.header {
+  display: flex;
+  height: 60px;
+}
+
+.desktop-header {
+  justify-content: space-evenly;
+}
+
+.mobile-header{
+  display: none;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  color: var(--azul-oscuro);
+  font-weight: 500;
+}
+
+.get-started {
+  background-color: var(--rojo-brillante);
+  border: none;
+  padding: 1em 1.5em;
+  font-weight: 500;
+  color: var(--gris-claro);
+  font-family: 'Be Vietnam Pro', sans-serif;
+  border-radius: 999px;
+}
+.introduction-section {
+  display: flex;
+}
+
+.introduction-h1 {
+  font-weight: 700;
+  color: var(--azul-oscuro);
+  font-size: 2.5rem;
+}
+
+.manage-title {
+  color: var(--azul-oscuro);
+  font-weight: 700;
+}
+
+.manage-ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+.li-title {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: .5rem;
+}
+
+.number {
+  display: inline-block;
+  background-color: var(--rojo-brillante);
+  padding: .5em 1.2em;
+  border-radius: 999px;
+  color: var(--gris-claro)
+}
+
+.li-h4 {
+  color: rgba(35, 44, 81, .9);
+}
+
+.li-p {
+  color: var(--azul-grisaceo-oscuro);
+}
+
+@media screen and (max-width:768px){
+
+  body {
+    background-image: url('../../imagenes/bg-tablet-pattern.svg');
+    background-size: 95%;
+    background-position: 200% -10%;
+    background-repeat: no-repeat;
+  }
+
+  .desktop-header {
+    display: none;
+  }
+
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 1.5em;
+    align-items: center;
+  }
+
+  .responsive-nav {
+    width: 40px;
+    height: 100%;
+    display: grid;
+    place-content: center;
+  }
+  
+  .burger {
+    display: inline-block;
+    background-color: var(--azul-muy-oscuro);
+    width: 35px;
+    height: 5px;
+  }
+
+  .burger::before {
+    content: '';
+    display: inline-block;
+    background-color: var(--azul-muy-oscuro);
+    width: 35px;
+    height: 5px;
+    position: absolute;
+    transform: translateY(-0.6em);
+  }
+
+  .burger::after {
+    content: '';
+    display: inline-block;
+    background-color: var(--azul-muy-oscuro);
+    width: 35px;
+    height: 5px;
+    position: absolute;
+    transform: translateY(0.6em);
+  }
+
+  .get-started-section {
+    background-image: url('../../imagenes/bg-tablet-pattern.svg');
+    background-size: 80%;
+    background-position:150% 0;
+    background-repeat: no-repeat;
+  }
+
+  .introduction-section {
+    text-align: center;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-bottom: 5rem;
+  }
+
+  .section-p {
+    padding: 0 2em;
+    line-height: 1.8em;
+    color: var(--azul-grisaceo-oscuro);
+    text-align: center;
+  }
+
+  .section-p:nth-child(2) {
+    margin-bottom: 60px;
+    padding: 0 25px;
+  }
+
+  .introduction-section img{
+    max-width: 80%;
+  }
+
+  .manage-title {
+    text-align: center;
+    padding: 0 15%;
+  }
+  
+  .ol-li {
+    margin-bottom: 30px;
+  }
+
+  .li-title {
+    padding-left: 1.5rem;
+    background-color: var(--rojo-muy-palido);
+  }
+
+  .li-h4 {
+    font-size: 1em;
+    margin: 0;
+  }
+
+  .li-p {
+    padding: 0 15px;
+  }
+}
