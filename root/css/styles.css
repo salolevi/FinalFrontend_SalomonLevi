@@ -50,7 +50,7 @@ ul {
 
 /* Estilos seccion introductoria */
 
-.get-started {
+.get-started, .go-button {
   background-color: var(--rojo-brillante);
   border: none;
   padding: 1em 1.5em;
@@ -63,7 +63,7 @@ ul {
   transition: transform .3s;
 }
 
-.get-started:active {
+.get-started:active, .go-button:active {
   opacity: .8;
 }
 
@@ -217,6 +217,25 @@ ul {
 
 .last-li {
   margin-bottom: 0;
+}
+
+/* Estilos form */
+
+
+.email-input {
+  padding: 1em 20px;
+  border-radius: 999px;
+  border: none;
+  width: 200px;
+}
+
+.email-input::placeholder {
+  font-weight: 500;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.go-button {
+  padding: 1em 28px;
 }
 
 @media screen and (max-width:768px){
@@ -394,16 +413,33 @@ ul {
     background-repeat: no-repeat;
   }
 
-  .footer-logos {
-    flex-direction: column-reverse;
-  }
-
   .footer-info {
     flex-direction: column;
     align-items: center;
+    gap: 25px;
   }
+  .footer-logos {
+    flex-direction: column-reverse;
+    order: 1;
+  }
+
 
   .footernav-container {
     gap: 80px;
+  }
+
+  /* Estilos form */
+
+  .footer-form {
+    order: -1;
+    /* margin-bottom: 15px; */
+  }
+
+  /* Estilos copyright */
+  .copyright {
+    order: 2;
+    color: var(--azul-grisaceo-oscuro);
+    font-size: .8rem;
+    opacity: .8;
   }
 }
