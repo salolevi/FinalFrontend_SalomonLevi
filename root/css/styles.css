@@ -238,6 +238,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  background-image: url('../../imagenes/bg-simplify-section-desktop.svg');
 }
 
 .footer-title {
