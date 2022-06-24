@@ -280,6 +280,7 @@ a:hover::before {
   color: var(--rojo-brillante)
 }
 
+/* Seccion Footer Oscura */
 .footer-info {
   background-color: var(--azul-muy-oscuro);
   display: flex;
@@ -324,6 +325,10 @@ a:hover::before {
 
 .last-li {
   margin-bottom: 0;
+}
+
+.media-logo:hover {
+  filter: invert(18%) sepia(67%) saturate(5933%) hue-rotate(309deg) brightness(99%) contrast(117%);
 }
 
 .copyright {
