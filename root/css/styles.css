@@ -276,11 +276,12 @@ ul {
 }
 
 .contact-logos * {
-  width: 30px;
+  width: 35px;
 }
 
 .footernav-container {
   display: flex;
+  gap: 180px;
 }
 
 .footer-nav ul {
@@ -556,6 +557,9 @@ ul {
     order: 1;
   }
 
+  .contact-logos {
+    gap: 30px;
+  }
 
   .footernav-container {
     gap: 80px;
