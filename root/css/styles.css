@@ -54,17 +54,33 @@ ul {
 
 .introduction-section {
   display: flex;
+  /* flex-wrap: wrap-reverse; */
   justify-content: center;
   margin-top: 80px;
   margin-bottom: 100px;
   padding: 0 120px;
 }
+
+.stats-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.introduction-section img {
+  object-fit: cover;
+  min-width: 375px;
+  width: 100%;
+}
+
+
 .get-started-section {
   max-width: 50%;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
+  flex-shrink: 1;
 }
 
 .get-started, .go-button {
@@ -117,7 +133,22 @@ ul {
   padding: 0 120px;
 }
 
+.manage-info {
+  padding-right: 120px;
+}
+
+.manage-title {
+  font-size: 2.5rem;
+}
+
+.manage-section .section-p {
+  max-width: 80%;
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+}
+
 /* Estilos lista ordenada */
+
 
 .manage-ol {
   list-style: none;
@@ -134,7 +165,7 @@ ul {
 .number {
   display: inline-block;
   background-color: var(--rojo-brillante);
-  padding: .5em 1.2em;
+  padding: .6em 1.6em;
   border-radius: 999px;
   color: var(--gris-claro)
 }
@@ -146,6 +177,7 @@ ul {
 .li-p {
   color: var(--azul-grisaceo-oscuro);
   line-height: 1.8em;
+  padding-left: 72px;
 }
 
 /* Estilos seccion testimonios */
@@ -154,6 +186,7 @@ ul {
   text-align: center;
   display: block;
   padding: 0 50px;
+  margin-bottom: 10rem;
 }
 
 .testimonie-title {
@@ -203,11 +236,15 @@ ul {
 .simplify-section {
   background-color: var(--rojo-brillante);
   display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .footer-title {
+  padding: 1.8rem 0;
   font-size: 2.5em;
   color: var(--gris-claro);
+  max-width: 30%;
 }
 .footer-button {
   background-color: var(--gris-claro);
@@ -218,6 +255,8 @@ ul {
   background-color: var(--azul-muy-oscuro);
   display: flex;
   padding: 40px 0;
+  justify-content: space-around;
+  position: relative;
 }
 
 .footer-logos {
@@ -257,6 +296,14 @@ ul {
   margin-bottom: 0;
 }
 
+.copyright {
+  position: absolute;
+  bottom: 50px;
+  right: 120px;
+  color: var(--azul-grisaceo-oscuro);
+  font-size: .8em;
+}
+
 /* Estilos form */
 
 
@@ -275,6 +322,7 @@ ul {
 .go-button {
   padding: 1em 28px;
 }
+
 
 @media screen and (max-width:768px){
 
@@ -382,13 +430,28 @@ ul {
     padding:0;
   }
 
+  .manage-info {
+    padding-right: 0;
+    margin-bottom: 3.5rem;
+  }
+
+  .manage-section .section-p {
+    max-width: none;
+    padding: 0 1.6rem;
+  }
+
   .manage-title {
+    font-size: initial;
     text-align: center;
     padding: 0 15%;
   }
   
   .ol-li {
     margin-bottom: 30px;
+  }
+
+  .number {
+    padding: .5em 1.2em;
   }
 
   .li-title {
@@ -408,6 +471,7 @@ ul {
 
   .testimonies-section {
     padding: 0;
+    margin-bottom: initial;
   }
 
   .testimonies {
@@ -473,6 +537,13 @@ ul {
     gap: 15px;
     background-image: url('../../imagenes/bg-simplify-section-mobile.svg');
     background-repeat: no-repeat;
+    justify-content: center;
+  }
+
+  .footer-title {
+    max-width: none;
+    padding: 0;
+    margin: 0;
   }
 
   .footer-info {
@@ -503,5 +574,8 @@ ul {
     color: var(--azul-grisaceo-oscuro);
     font-size: .8rem;
     opacity: .8;
+    position: relative;
+    bottom: initial;
+    right: initial;
   }
 }
