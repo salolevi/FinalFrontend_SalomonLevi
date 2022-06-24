@@ -30,7 +30,7 @@ a {
   position: relative;
 }
 
-a::before {
+.nav-a::before, .footer-a::before {
   content: '';
   display: block;
   position: absolute;
